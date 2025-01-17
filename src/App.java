@@ -7,18 +7,20 @@ import main.Ejercicio_04_depth.Depth;
 import main.Materia.Controllers.ArbolAVL;
 import main.Materia.Controllers.ArbolBinario;
 import main.Materia.Controllers.ArbolRecorridos;
+import main.Materia.Controllers.Graph;
 import main.Materia.Controllers.Models.Node;
+import main.Materia.Controllers.Models.NodeGraph;
 
 public class App {
     public static void main(String[] args) throws Exception {
         //System.out.println("Hello, World!");
         //runArbolBinario();
         //runArbolAVL();
-        runEjercicio1();
-        runEjercicio2();
+        //runEjercicio1();
+        //runEjercicio2();
         //runEjercicio3();
-        runEjercicio4();
-       
+        //runEjercicio4();
+       runGraph();
 
     }
     public static void runEjercicio1(){
@@ -125,6 +127,25 @@ public class App {
         
 
         
+
+    }
+    public static void runGraph(){
+        Graph grafo = new Graph();
+
+        NodeGraph a = grafo.addNode(5);
+        NodeGraph b = grafo.addNode(7);
+        NodeGraph c = grafo.addNode(9);
+        NodeGraph d = grafo.addNode(11);
+        NodeGraph e = grafo.addNode(3);
+
+        grafo.addEdge(a, b);
+        grafo.addEdge(a, c);
+        grafo.addEdge(c, e);
+        grafo.addEdge(d, e);
+        
+        
+
+        grafo.printGraph();
 
     }
 
